@@ -1,4 +1,4 @@
-
+var gameStatus="";
 /*created by prashant shukla */
 
 var paddle2 =10,paddle1=10;
@@ -46,6 +46,8 @@ if (results.length>0){
  }
 
 function draw(){
+if(gameStatus=="start"){
+
 
  background(0); 
 
@@ -84,6 +86,7 @@ function draw(){
    
    //function move call which in very important
     move();
+}
 }
 
 
@@ -180,4 +183,9 @@ function paddleInCanvas(){
   if(mouseY < 0){
     mouseY =0;
   }  
+}
+function startGame(){
+  gameStatus="start";
+  document.getElementById("status").innerHTML="game is loaded";
+
 }
